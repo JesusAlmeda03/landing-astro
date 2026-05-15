@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const posts = [
+  {
+    title: "10 Tendencias de Marketing Digital para 2024",
+    excerpt: "Descubre las estrategias que dominarán el panorama del marketing digital este año",
+    date: "15 Enero 2024",
+    category: "Marketing Digital",
+    image: "📱"
+  },
+  {
+    title: "Cómo crear una identidad de marca memorable",
+    excerpt: "Guía completa para desarrollar un branding que conecte con tu audiencia",
+    date: "10 Enero 2024",
+    category: "Branding",
+    image: "🎨"
+  },
+  {
+    title: "El poder del video marketing en redes sociales",
+    excerpt: "Estrategias para crear contenido audiovisual que genere engagement",
+    date: "5 Enero 2024",
+    category: "Contenido",
+    image: "🎬"
+  },
+  {
+    title: "SEO Local: Aumenta tu visibilidad en búsquedas cercanas",
+    excerpt: "Técnicas para mejorar tu posicionamiento en búsquedas geográficas",
+    date: "28 Diciembre 2023",
+    category: "SEO",
+    image: "🔍"
+  },
+  {
+    title: "Storytelling: El arte de contar historias en publicidad",
+    excerpt: "Cómo usar narrativas emocionales para conectar con tu audiencia",
+    date: "20 Diciembre 2023",
+    category: "Creatividad",
+    image: "📖"
+  },
+  {
+    title: "Métricas que realmente importan en campañas digitales",
+    excerpt: "KPIs esenciales para medir el éxito de tus estrategias de marketing",
+    date: "15 Diciembre 2023",
+    category: "Analytics",
+    image: "📊"
+  }
+];
+---
+
+<BaseLayout title="Blog - CreativaAds" description="Artículos, tendencias y consejos sobre publicidad y marketing digital">
+  <Header />
+  
+  <section class="blog-hero">
+    <h1>Nuestro Blog</h1>
+    <p>Tendencias, consejos y estrategias de marketing y publicidad</p>
+  </section>
+  
+  <section class="blog-content">
+    <div class="blog-grid">
+      {posts.map(post => (
+        <article class="blog-card">
+          <div class="blog-image">{post.image}</div>
+          <div class="blog-info">
+            <span class="category">{post.category}</span>
+            <span class="date">{post.date}</span>
+          </div>
+          <h2>{post.title}</h2>
+          <p>{post.excerpt}</p>
+          <a href="#" class="read-more">Leer más →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+  
+  <section class="newsletter">
+    <h2>Suscríbete a nuestro newsletter</h2>
+    <p>Recibe las últimas tendencias y consejos directamente en tu correo</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="tu@email.com" required />
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding: 10rem 5% 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+  }
+  
+  .blog-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .blog-content {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .blog-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }
+  
+  .blog-image {
+    height: 200px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+  }
+  
+  .blog-card > div:last-of-type,
+  .blog-card h2,
+  .blog-card p,
+  .blog-card .read-more {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .blog-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .category {
+    background: #fff5f2;
+    color: #ff6b35;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .date {
+    color: #999;
+  }
+  
+  .blog-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .blog-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    color: #ff6b35;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    transition: transform 0.3s;
+  }
+  
+  .read-more:hover {
+    transform: translateX(5px);
+  }
+  
+  .newsletter {
+    padding: 6rem 5%;
+    text-align: center;
+    background: #f9fafb;
+  }
+  
+  .newsletter h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .newsletter p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .newsletter-form button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .newsletter-form button:hover {
+    background: #e85a28;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+      flex-direction: column;
+    }
+  }
+</style>

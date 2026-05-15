@@ -1,0 +1,140 @@
+---
+const testimonials = [
+  {
+    name: "Laura Martínez",
+    role: "Directora de Marketing, TechStart",
+    image: "👩‍💼",
+    text: "CreativaAds transformó completamente nuestra estrategia de marketing. Su enfoque creativo y orientado a resultados nos ayudó a triplicar nuestro engagement en redes sociales."
+  },
+  {
+    name: "Roberto Silva",
+    role: "CEO, FashionBrand",
+    image: "👨‍💼",
+    text: "El equipo de CreativaAds capturó la esencia de nuestra marca de manera excepcional. La campaña que desarrollaron superó todas nuestras expectativas y generó un ROI increíble."
+  },
+  {
+    name: "Carmen Rodríguez",
+    role: "Founder, EcoShop",
+    image: "👩‍🚀",
+    text: "Profesionales, creativos y comprometidos. Trabajar con CreativaAds fue una experiencia fantástica desde el primer día. Altamente recomendados."
+  }
+];
+---
+
+<section id="testimonials" class="testimonials">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <p class="subtitle">La satisfacción de nuestros clientes es nuestra mejor carta de presentación</p>
+  
+  <div class="testimonials-grid">
+    {testimonials.map(testimonial => (
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">{testimonial.text}</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">{testimonial.image}</div>
+          <div class="author-info">
+            <strong>{testimonial.name}</strong>
+            <span>{testimonial.role}</span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 4rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .testimonial-card {
+    padding: 2.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255,107,53,0.15);
+  }
+  
+  .quote-icon {
+    font-size: 4rem;
+    color: #ff6b35;
+    opacity: 0.2;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+  }
+  
+  .testimonial-avatar {
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
+  
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .author-info strong {
+    color: #1a1a1a;
+    font-size: 1.125rem;
+  }
+  
+  .author-info span {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

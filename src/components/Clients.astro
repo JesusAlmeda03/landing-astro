@@ -1,0 +1,73 @@
+---
+const clients = [
+  { name: "TechCorp", logo: "🏢" },
+  { name: "FashionBrand", logo: "👗" },
+  { name: "FoodChain", logo: "🍔" },
+  { name: "AutoGroup", logo: "🚗" },
+  { name: "FinanceInc", logo: "💰" },
+  { name: "HealthPlus", logo: "⚕️" }
+];
+---
+
+<section class="clients">
+  <h2>Confían en nosotros</h2>
+  <p class="subtitle">Trabajamos con marcas líderes en diversos sectores</p>
+  
+  <div class="clients-grid">
+    {clients.map(client => (
+      <div class="client-card">
+        <div class="client-logo">{client.logo}</div>
+        <p>{client.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .clients {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .clients h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 4rem;
+  }
+  
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+  }
+  
+  .client-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .client-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .client-logo {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .client-card p {
+    color: #666;
+    font-weight: 600;
+  }
+</style>

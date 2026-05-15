@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Nosotros - CreativaAds" description="Conoce nuestra historia, equipo y valores">
+  <Header />
+  
+  <section class="about-hero">
+    <h1>Sobre CreativaAds</h1>
+    <p>Creamos conexiones significativas entre marcas y personas</p>
+  </section>
+  
+  <section class="about-story">
+    <div class="container">
+      <div class="story-content">
+        <h2>Nuestra Historia</h2>
+        <p>Fundada en 2015, CreativaAds nació con la visión de revolucionar la forma en que las marcas se comunican con su audiencia. Con más de 8 años de experiencia en el mercado, hemos ayudado a cientos de empresas a alcanzar sus objetivos de marketing y posicionamiento.</p>
+        <p>Nuestro equipo multidisciplinario combina creatividad, estrategia y tecnología para crear campañas que generan resultados medibles y duraderos.</p>
+      </div>
+      <div class="story-image">
+        <div class="placeholder">📖</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="mission-vision">
+    <div class="container">
+      <div class="mission">
+        <h3>🎯 Misión</h3>
+        <p>Impulsar el crecimiento de nuestros clientes a través de estrategias creativas e innovadoras que conecten emocionalmente con su audiencia.</p>
+      </div>
+      <div class="vision">
+        <h3>🚀 Visión</h3>
+        <p>Ser la agencia de publicidad líder en creatividad y resultados, reconocida por nuestra capacidad de transformar marcas y generar impacto real.</p>
+      </div>
+      <div class="values">
+        <h3>💎 Valores</h3>
+        <ul>
+          <li>Creatividad sin límites</li>
+          <li>Compromiso con resultados</li>
+          <li>Transparencia total</li>
+          <li>Innovación constante</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section class="team">
+    <h2>Nuestro Equipo</h2>
+    <p class="subtitle">Profesionales apasionados por la publicidad</p>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-photo">👨‍💼</div>
+        <h4>Carlos Méndez</h4>
+        <p class="role">Director Creativo</p>
+        <p>15 años de experiencia en publicidad y branding</p>
+      </div>
+      <div class="team-member">
+        <div class="member-photo">👩‍💼</div>
+        <h4>Ana Rodríguez</h4>
+        <p class="role">Directora de Estrategia</p>
+        <p>Especialista en marketing digital y análisis de datos</p>
+      </div>
+      <div class="team-member">
+        <div class="member-photo">👨‍🎨</div>
+        <h4>Luis Torres</h4>
+        <p class="role">Director de Arte</p>
+        <p>Diseñador gráfico con premios internacionales</p>
+      </div>
+      <div class="team-member">
+        <div class="member-photo">👩‍💻</div>
+        <h4>María González</h4>
+        <p class="role">Directora de Producción</p>
+        <p>Experta en producción audiovisual y multimedia</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <h2>¿Listo para trabajar con nosotros?</h2>
+    <p>Conversemos sobre tu próximo proyecto</p>
+    <a href="/contacto" class="cta-button">Contacta con nosotros</a>
+  </section>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .about-hero {
+    padding: 10rem 5% 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+  
+  .about-story {
+    padding: 6rem 0;
+  }
+  
+  .about-story .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .story-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+  
+  .story-content p {
+    font-size: 1.125rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  .placeholder {
+    width: 100%;
+    height: 400px;
+    background: #f9fafb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+  }
+  
+  .mission-vision {
+    padding: 6rem 0;
+    background: #f9fafb;
+  }
+  
+  .mission-vision .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+  
+  .mission, .vision, .values {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  
+  .mission h3, .vision h3, .values h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .mission p, .vision p {
+    color: #666;
+    line-height: 1.8;
+  }
+  
+  .values ul {
+    list-style: none;
+    color: #666;
+  }
+  
+  .values li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .values li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+    font-weight: bold;
+  }
+  
+  .team {
+    padding: 6rem 5%;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 4rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .member-photo {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team-member h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .role {
+    color: #ff6b35;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .team-member p {
+    color: #666;
+  }
+  
+  .cta-section {
+    padding: 6rem 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #ff6b35;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .about-story .container {
+      grid-template-columns: 1fr;
+    }
+    
+    .placeholder {
+      height: 300px;
+      font-size: 6rem;
+    }
+  }
+</style>

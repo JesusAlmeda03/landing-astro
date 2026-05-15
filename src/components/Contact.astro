@@ -1,0 +1,179 @@
+---
+---
+
+<section id="contact" class="contact">
+  <div class="contact-content">
+    <div class="contact-info">
+      <h2>¿Listo para comenzar tu proyecto?</h2>
+      <p>Contáctanos y descubre cómo podemos ayudarte a alcanzar tus objetivos de marketing</p>
+      
+      <div class="contact-details">
+        <div class="detail">
+          <span class="icon">📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>hola@creativaads.com</p>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <span class="icon">📱</span>
+          <div>
+            <strong>Teléfono</strong>
+            <p>+52 55 1234 5678</p>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <span class="icon">📍</span>
+          <div>
+            <strong>Oficina</strong>
+            <p>Ciudad de México</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <button type="submit" class="submit-button">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  .contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .contact-info > p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .detail {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+  }
+  
+  .detail .icon {
+    font-size: 2rem;
+  }
+  
+  .detail strong {
+    display: block;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+  
+  .detail p {
+    color: #666;
+  }
+  
+  .contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #ff6b35;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #e85a28;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

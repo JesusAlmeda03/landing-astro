@@ -1,0 +1,106 @@
+---
+const features = [
+  {
+    icon: "📱",
+    title: "Marketing Digital",
+    description: "Estrategias en redes sociales, SEO, SEM y contenido digital para aumentar tu presencia online"
+  },
+  {
+    icon: "🎬",
+    title: "Producción Audiovisual",
+    description: "Creación de videos comerciales, spots publicitarios y contenido multimedia de alto impacto"
+  },
+  {
+    icon: "🎨",
+    title: "Diseño Creativo",
+    description: "Branding, diseño gráfico y desarrollo de identidad visual que refleje la esencia de tu marca"
+  },
+  {
+    icon: "📊",
+    title: "Estrategia de Marca",
+    description: "Planificación estratégica y posicionamiento de marca para destacar en tu mercado"
+  },
+  {
+    icon: "📸",
+    title: "Fotografía Comercial",
+    description: "Sesiones fotográficas profesionales para productos, eventos y campañas publicitarias"
+  },
+  {
+    icon: "💡",
+    title: "Consultoría Creativa",
+    description: "Asesoramiento experto para desarrollar campañas innovadoras y efectivas"
+  }
+];
+---
+
+<section id="servicios" class="features">
+  <h2>Nuestros Servicios</h2>
+  <p class="subtitle">Soluciones integrales de publicidad para impulsar tu negocio</p>
+  
+  <div class="features-grid">
+    {features.map(feature => (
+      <div class="feature-card">
+        <div class="icon">{feature.icon}</div>
+        <h3>{feature.title}</h3>
+        <p>{feature.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    background: #f9fafb;
+  }
+  
+  .features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 4rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255,107,53,0.15);
+  }
+  
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+  
+  .feature-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+</style>

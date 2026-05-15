@@ -1,0 +1,327 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contacto - CreativaAds" description="Contáctanos para comenzar tu próximo proyecto de publicidad">
+  <Header />
+  
+  <section class="contact-hero">
+    <h1>Hablemos de tu proyecto</h1>
+    <p>Estamos listos para hacer realidad tus ideas</p>
+  </section>
+  
+  <section class="contact-content">
+    <div class="contact-info">
+      <h2>Información de Contacto</h2>
+      <p class="intro">Estamos aquí para ayudarte. Contáctanos por cualquiera de estos medios o llena el formulario.</p>
+      
+      <div class="contact-details">
+        <div class="detail">
+          <span class="icon">📍</span>
+          <div>
+            <strong>Oficina Principal</strong>
+            <p>Av. Reforma 123, Piso 10<br/>Ciudad de México, 06600</p>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <span class="icon">📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>hola@creativaads.com<br/>ventas@creativaads.com</p>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <span class="icon">📱</span>
+          <div>
+            <strong>Teléfono</strong>
+            <p>+52 55 1234 5678<br/>Lun - Vie: 9:00 - 18:00</p>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <span class="icon">💬</span>
+          <div>
+            <strong>Redes Sociales</strong>
+            <div class="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <form class="contact-form">
+      <h3>Envíanos un mensaje</h3>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" />
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" />
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="servicio">Servicio de interés</label>
+        <select id="servicio" name="servicio">
+          <option value="">Selecciona un servicio</option>
+          <option value="marketing">Marketing Digital</option>
+          <option value="audiovisual">Producción Audiovisual</option>
+          <option value="diseno">Diseño Creativo</option>
+          <option value="estrategia">Estrategia de Marca</option>
+          <option value="fotografia">Fotografía Comercial</option>
+          <option value="consultoria">Consultoría Creativa</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="presupuesto">Presupuesto estimado</label>
+        <select id="presupuesto" name="presupuesto">
+          <option value="">Selecciona un rango</option>
+          <option value="5-10k">$5,000 - $10,000</option>
+          <option value="10-25k">$10,000 - $25,000</option>
+          <option value="25-50k">$25,000 - $50,000</option>
+          <option value="50k+">Más de $50,000</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="mensaje">Cuéntanos sobre tu proyecto *</label>
+        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+      </div>
+      
+      <button type="submit" class="submit-button">Enviar mensaje</button>
+      
+      <p class="privacy-note">Al enviar este formulario, aceptas nuestra política de privacidad.</p>
+    </form>
+  </section>
+  
+  <section class="map-section">
+    <div class="map-placeholder">
+      <p>🗺️ Mapa de ubicación</p>
+    </div>
+  </section>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-hero {
+    padding: 10rem 5% 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+  }
+  
+  .contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6rem 5%;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .intro {
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .detail {
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  
+  .detail .icon {
+    font-size: 2.5rem;
+  }
+  
+  .detail strong {
+    display: block;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .detail p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social-links a {
+    color: #ff6b35;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #e85a28;
+  }
+  
+  .contact-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  
+  .contact-form h3 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #ff6b35;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #e85a28;
+  }
+  
+  .privacy-note {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #999;
+    text-align: center;
+  }
+  
+  .map-section {
+    padding: 0 5% 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .map-placeholder {
+    height: 400px;
+    background: #f9fafb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #999;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+      padding: 2rem;
+    }
+  }
+</style>
